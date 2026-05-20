@@ -1,0 +1,612 @@
+/* ========================================
+   EDITORIAL LUXURY DESIGN SYSTEM
+   Baby Pink + Deep Black Aesthetic
+   ======================================== */
+
+/* EDITORIAL TYPOGRAPHY */
+.editorial-heading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #F0F0F0;
+}
+
+.editorial-subheading {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  color: #F0F0F0;
+}
+
+.editorial-body {
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  color: #9A9A9A;
+}
+
+.editorial-accent {
+  color: #FFB3D9;
+  font-weight: 400;
+}
+
+/* LUXURY SPACING */
+.section-spacer {
+  padding: 8rem 0;
+}
+
+.section-spacer-lg {
+  padding: 12rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-spacer {
+    padding: 4rem 0;
+  }
+  .section-spacer-lg {
+    padding: 6rem 0;
+  }
+}
+
+/* BABY PINK GLOW - SOFT & ELEGANT */
+.baby-pink-glow {
+  box-shadow: 0 0 30px rgba(255, 179, 217, 0.2),
+              0 0 60px rgba(255, 179, 217, 0.1);
+  transition: box-shadow 0.5s ease;
+}
+
+.baby-pink-glow:hover {
+  box-shadow: 0 0 40px rgba(255, 179, 217, 0.35),
+              0 0 80px rgba(255, 179, 217, 0.15),
+              0 0 120px rgba(255, 179, 217, 0.08);
+}
+
+/* EDITORIAL BUTTON */
+.editorial-button {
+  background: #FFB3D9;
+  color: #0D0D0D;
+  padding: 1rem 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+.editorial-button:hover {
+  background: #FFC9E3;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(255, 179, 217, 0.3);
+}
+
+.editorial-button:active {
+  transform: translateY(0);
+}
+
+/* EDITORIAL CARD */
+.editorial-card {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 179, 217, 0.1);
+  border-radius: 1rem;
+  padding: 3rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.editorial-card:hover {
+  background: rgba(22, 22, 22, 0.7);
+  border-color: rgba(255, 179, 217, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 0 40px rgba(255, 179, 217, 0.1);
+}
+
+/* IMAGE ZOOM ON SCROLL */
+.image-zoom-scroll {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.image-zoom-scroll img {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-zoom-scroll:hover img {
+  transform: scale(1.05);
+}
+
+/* GLASSMORPHISM EDITORIAL */
+.glass-editorial {
+  background: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+  border: 1px solid rgba(255, 179, 217, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+              inset 0 1px 0 rgba(255, 179, 217, 0.08);
+}
+
+/* SOFT BORDER HIGHLIGHT */
+.border-baby-pink {
+  border: 1px solid rgba(255, 179, 217, 0.15);
+  transition: border-color 0.4s ease;
+}
+
+.border-baby-pink:hover {
+  border-color: rgba(255, 179, 217, 0.4);
+}
+
+/* MINIMAL ICON STYLE */
+.minimal-icon {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1;
+  color: #FFB3D9;
+}
+
+/* STAGGERED FADE IN */
+@keyframes fade-in-up-editorial {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-editorial {
+  opacity: 0;
+  animation: fade-in-up-editorial 1s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* HERO OVERLAY */
+.hero-overlay-dark {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(13, 13, 13, 0.85) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+/* SECTION ALTERNATING BACKGROUNDS */
+.section-charcoal {
+  background: #0D0D0D;
+}
+
+.section-dark-gray {
+  background: #1F1F1F;
+}
+
+/* SOFT GRADIENT ACCENT */
+.gradient-baby-pink {
+  background: linear-gradient(135deg, #FFB3D9 0%, #FFC9E3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TESTIMONIAL CARD */
+.testimonial-card {
+  background: rgba(18, 18, 18, 0.4);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 179, 217, 0.15);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+/* SMOOTH ROUNDED CORNERS */
+.rounded-editorial {
+  border-radius: 1rem;
+}
+
+.rounded-editorial-lg {
+  border-radius: 1.5rem;
+}
+
+/* LETTER SPACING PREMIUM */
+.tracking-luxury {
+  letter-spacing: 0.05em;
+}
+
+.tracking-luxury-wide {
+  letter-spacing: 0.1em;
+}
+
+/* SOFT SHADOW */
+.shadow-soft {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-soft-pink {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+              0 0 30px rgba(255, 179, 217, 0.08);
+}
+
+/* HOVER SCALE REFINED */
+.hover-scale-editorial:hover {
+  transform: scale(1.02);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* FULL WIDTH SECTION */
+.full-width-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* ========================================
+   CINEMATIC HERO BACKGROUND
+   ======================================== */
+
+/* Hero Background Container */
+.hero-background-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Animated Background Image */
+.hero-background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/hero-image.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  will-change: transform;
+  animation: subtle-zoom 30s ease-in-out infinite alternate;
+}
+
+/* Subtle Zoom Animation */
+@keyframes subtle-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Parallax Effect (Applied via JS) */
+.hero-background-parallax {
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Gradient Overlay - LEFT SIDE for Text */
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(13, 13, 13, 0.85) 35%,
+    rgba(13, 13, 13, 0.4) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Animated Pink Glow Overlay */
+.hero-pink-glow-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 50%,
+    rgba(255, 179, 217, 0.08) 0%,
+    transparent 50%
+  );
+  animation: glow-pulse 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Floating Particles */
+.floating-dust-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(255, 179, 217, 0.6), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: float-dust 15s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes float-dust {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--float-x), var(--float-y)) scale(1);
+  }
+}
+
+/* Soft Light Reflections */
+.hero-light-reflection {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 179, 217, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+  animation: light-float 12s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes light-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Vignette Effect */
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 2;
+}
+
+/* Content Layer */
+.hero-content-layer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-background-image {
+    background-position: 70% center;
+  }
+  
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(13, 13, 13, 0.85) 50%,
+      rgba(13, 13, 13, 0.6) 100%
+    );
+  }
+}
+
+/* Performance Optimizations */
+.hero-background-container * {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ========================================
+   LUXURY PRODUCT CARDS
+   ======================================== */
+
+/* Product Card Container */
+.product-card-luxury {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(248, 168, 201, 0.1);
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.product-card-luxury:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(248, 168, 201, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+              0 0 40px rgba(248, 168, 201, 0.15),
+              0 0 80px rgba(248, 168, 201, 0.08);
+}
+
+/* Product Button - Primary */
+.product-button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #FFB3D9 0%, #FFC9E3 100%);
+  color: #0D0D0D;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-button-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FFC9E3 0%, #FFE0F0 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(248, 168, 201, 0.4);
+}
+
+.product-button-primary:hover::before {
+  opacity: 1;
+}
+
+.product-button-primary > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Product Button - Secondary */
+.product-button-secondary {
+  padding: 0.75rem 1.5rem;
+  background: rgba(248, 168, 201, 0.1);
+  color: #FFB3D9;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(248, 168, 201, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-button-secondary:hover {
+  background: rgba(248, 168, 201, 0.15);
+  border-color: rgba(248, 168, 201, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Line Clamp Utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Product Card Animations */
+@keyframes product-card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .product-card-luxury {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card-luxury:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+/* Product Image Container */
+.product-card-luxury .aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Smooth Image Loading */
+.product-card-luxury img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* ========================================
+   RECOMMENDATION CARDS
+   ======================================== */
+
+/* Recommendation Card Container */
+.recommendation-card-luxury {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(248, 168, 201, 0.15);
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.recommendation-card-luxury:hover {
+  transform: translateY(-12px) scale(1.03);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(248, 168, 201, 0.4);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6),
+              0 0 50px rgba(248, 168, 201, 0.2),
+              0 0 100px rgba(248, 168, 201, 0.1);
+}
+
+/* Recommendation Reason Box */
+.recommendation-reason {
+  padding: 1rem;
+  background: rgba(248, 168, 201, 0.05);
+  border-left: 3px solid rgba(248, 168, 201, 0.4);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+/* Recommended Badge Animation */
+.recommendation-card-luxury .bg-gradient-to-br {
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(248, 168, 201, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(248, 168, 201, 0.5);
+  }
+}
+
+/* Enhanced Hover Glow for Recommendations */
+.recommendation-card-luxury:hover .recommendation-reason {
+  background: rgba(248, 168, 201, 0.08);
+  border-left-color: rgba(248, 168, 201, 0.6);
+}
