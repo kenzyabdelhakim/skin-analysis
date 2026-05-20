@@ -11,7 +11,6 @@ import { CursorGlow } from './CursorGlow';
 import { AnalysisHistory } from './AnalysisHistory';
 import { CartDrawer } from './CartDrawer';
 import { analyzeSkin, checkBackendHealth, generateMockAnalysis, saveAnalysisData } from '../services/api';
-import { useAuth } from '../context/AuthContext';
 
 export interface AnalysisData {
   skinType: {
@@ -24,7 +23,7 @@ export interface AnalysisData {
 }
 
 export const DermaStationWebsite: React.FC = () => {
-  const { accessToken } = useAuth();
+  const accessToken = null;
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [analysisData, setAnalysisData] = useState<AnalysisData | null>(null);

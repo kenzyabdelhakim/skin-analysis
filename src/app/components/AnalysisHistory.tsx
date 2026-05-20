@@ -2,7 +2,6 @@ import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Download, Trash2, History, Loader2 } from 'lucide-react';
 import { fetchAnalysisHistory, deleteAnalysis, DBAnalysis } from '../services/api';
-import { useAuth } from '../context/AuthContext';
 
 interface Props {
   open: boolean;
@@ -113,7 +112,7 @@ async function downloadWithDetails(item: DBAnalysis, accessToken: string | null)
 }
 
 export function AnalysisHistory({ open, onClose, version = 0 }: Props) {
-  const { accessToken } = useAuth();
+  const accessToken = null;
   const [items, setItems] = useState<DBAnalysis[]>([]);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState<number | null>(null);

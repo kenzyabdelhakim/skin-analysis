@@ -1,8 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useState, useEffect } from 'react';
-import { Home, Info, MapPin, Wrench, Mail, Package, LogOut, History, ShoppingCart } from 'lucide-react';
+import { Home, Info, MapPin, Wrench, Mail, Package, History, ShoppingCart } from 'lucide-react';
 import { Button } from '../Button';
-import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 
 interface NavbarProps {
@@ -11,7 +10,6 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory, onOpenCart }) => {
-  const { user, logout } = useAuth();
   const { totalItems } = useCart();
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -85,15 +83,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory, onOpenCart }) => 
           {/* Right side actions */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-2">
             {/* History icon */}
-            {user && (
-              <button
-                onClick={onOpenHistory}
-                title="Analysis History"
-                className="relative w-9 h-9 rounded-xl flex items-center justify-center text-gray-400 hover:text-primary transition-all hover:bg-primary/10"
-              >
-                <History className="w-5 h-5" />
-              </button>
-            )}
+            <button
+              onClick={onOpenHistory}
+              title="Analysis History"
+              className="relative w-9 h-9 rounded-xl flex items-center justify-center text-gray-400 hover:text-primary transition-all hover:bg-primary/10"
+            >
+              <History className="w-5 h-5" />
+            </button>
 
             {/* Cart icon */}
             <button
@@ -115,25 +111,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory, onOpenCart }) => 
             {/* Divider */}
             <div className="w-px h-5 mx-1" style={{ background: 'rgba(255,179,217,0.2)' }} />
 
-            {/* User greeting + sign out */}
-            {user && (
-              <span className="hidden sm:block text-sm text-gray-400">
-                Hi, <span className="text-primary font-medium">{user.first_name || user.username}</span>
-              </span>
-            )}
-            {user ? (
-              <button
-                onClick={logout}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-primary border border-primary/20 hover:border-primary/50 transition-all"
-              >
-                <LogOut className="w-4 h-4" />
-                <span className="hidden sm:inline">Sign out</span>
-              </button>
-            ) : (
-              <Button variant="primary" size="sm" className="btn-luxury-glow">
-                Get Started
-              </Button>
-            )}
+            <Button
+              variant="primary"
+              size="sm"
+              className="btn-luxury-glow"
+              onClick={() => window.location.hash = '#home'}
+            >
+              Get Started
+            </Button>
           </motion.div>
         </div>
       </div>
